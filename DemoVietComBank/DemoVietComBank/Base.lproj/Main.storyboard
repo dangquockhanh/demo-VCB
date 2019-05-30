@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pXH-p4-97T">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="nTx-eM-8bV">
+            <objects>
+                <viewController id="pXH-p4-97T" customClass="ViewController" customModule="DemoVietComBank" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ie7-tj-e8x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="r7j-da-p75">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="290"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="hjc-5u-JeI">
+                                    <size key="itemSize" width="413" height="279"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="8Xf-dC-bhb" customClass="CollectionViewCell" customModule="DemoVietComBank" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="5.666666666666667" width="413" height="279"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="413" height="279"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6s5-pd-ADD">
+                                                    <rect key="frame" x="0.0" y="-12" width="413" height="291"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="6s5-pd-ADD" firstAttribute="leading" secondItem="8Xf-dC-bhb" secondAttribute="leading" id="9gV-IF-GXH"/>
+                                            <constraint firstAttribute="trailing" secondItem="6s5-pd-ADD" secondAttribute="trailing" id="NHq-95-YjC"/>
+                                            <constraint firstAttribute="bottom" secondItem="6s5-pd-ADD" secondAttribute="bottom" id="TcS-LY-4go"/>
+                                            <constraint firstAttribute="trailing" secondItem="6s5-pd-ADD" secondAttribute="trailing" id="b5J-HH-449"/>
+                                            <constraint firstItem="6s5-pd-ADD" firstAttribute="leading" secondItem="8Xf-dC-bhb" secondAttribute="leading" id="fP2-MQ-tUW"/>
+                                            <constraint firstItem="6s5-pd-ADD" firstAttribute="top" secondItem="8Xf-dC-bhb" secondAttribute="top" constant="-12" id="sjd-Sx-EoU"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageCell" destination="6s5-pd-ADD" id="h7q-hm-vBn"/>
+                                            <outlet property="pageControl" destination="gMB-yr-VVS" id="ETW-ME-3N9"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="pXH-p4-97T" id="0AY-r1-A3J"/>
+                                    <outlet property="delegate" destination="pXH-p4-97T" id="1PY-ii-sq5"/>
+                                </connections>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" defersCurrentPageDisplay="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="gMB-yr-VVS">
+                                <rect key="frame" x="364" y="176.33333333333334" width="39" height="37"/>
+                            </pageControl>
+                            <containerView opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Rl-LV-NaM">
+                                <rect key="frame" x="0.0" y="208.66666666666666" width="414" height="47.333333333333343"/>
+                                <connections>
+                                    <segue destination="hOf-mq-vDn" kind="embed" id="EXf-Gz-s6F"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gMB-yr-VVS" firstAttribute="centerX" secondItem="Ie7-tj-e8x" secondAttribute="centerX" multiplier="5/2.7" id="6Oh-K6-Ovd"/>
+                            <constraint firstItem="7Rl-LV-NaM" firstAttribute="centerY" secondItem="6Td-KD-HEt" secondAttribute="centerY" multiplier="1/1.95" id="7Vc-ry-vrf"/>
+                            <constraint firstItem="7Rl-LV-NaM" firstAttribute="centerX" secondItem="6Td-KD-HEt" secondAttribute="centerX" id="Szl-HA-gWf"/>
+                            <constraint firstItem="7Rl-LV-NaM" firstAttribute="height" secondItem="Ie7-tj-e8x" secondAttribute="height" multiplier="1/19" id="a1O-WN-wH9"/>
+                            <constraint firstItem="gMB-yr-VVS" firstAttribute="centerY" secondItem="Ie7-tj-e8x" secondAttribute="centerY" multiplier="1/2.3" id="cHx-ox-G8Y"/>
+                            <constraint firstItem="7Rl-LV-NaM" firstAttribute="width" secondItem="Ie7-tj-e8x" secondAttribute="width" id="sMm-LT-8zY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Td-KD-HEt"/>
+                    </view>
+                    <connections>
+                        <outlet property="myCollectionView" destination="r7j-da-p75" id="d9t-Ku-1fX"/>
+                        <outlet property="pageControl" destination="gMB-yr-VVS" id="mEp-Ki-w8s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sf5-eK-UbR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3153.6231884057975" y="-69.642857142857139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="w15-WV-sHP">
+            <objects>
+                <viewController id="PXl-tZ-HU5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xV2-QY-1OU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="led-e3-Pry"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LJO-47-NN1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="Ucr-hr-b0h">
+            <objects>
+                <viewController id="hOf-mq-vDn" customClass="menuViewController" customModule="DemoVietComBank" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DI1-ER-Wh2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="47.333333333333343"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999999999999996" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gon-gN-eTt">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="47.333333333333336"/>
+                                <color key="backgroundColor" red="0.32313282334990068" green="1" blue="0.33561065698328818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="91K-re-FwI">
+                                    <size key="itemSize" width="65" height="62.666666666666664"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellmenu" id="Qbo-s6-TlO" customClass="menuCollectionViewCell" customModule="DemoVietComBank" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-7.666666666666667" width="65" height="62.666666666666664"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="65" height="62.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qBO-I9-FQ6">
+                                                    <rect key="frame" x="0.0" y="0.0" width="65" height="62.666666666666664"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="qBO-I9-FQ6" firstAttribute="top" secondItem="Qbo-s6-TlO" secondAttribute="top" id="2DX-wx-xR7"/>
+                                            <constraint firstAttribute="bottom" secondItem="qBO-I9-FQ6" secondAttribute="bottom" id="FTD-MH-ZWz"/>
+                                            <constraint firstAttribute="trailing" secondItem="qBO-I9-FQ6" secondAttribute="trailing" id="du9-Ha-ZEF"/>
+                                            <constraint firstItem="qBO-I9-FQ6" firstAttribute="leading" secondItem="Qbo-s6-TlO" secondAttribute="leading" id="zDh-1T-Xaf"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="images" destination="qBO-I9-FQ6" id="bj1-FD-uBz"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gon-gN-eTt" firstAttribute="leading" secondItem="DI1-ER-Wh2" secondAttribute="leading" id="dh3-Kw-Jwk"/>
+                            <constraint firstAttribute="bottom" secondItem="gon-gN-eTt" secondAttribute="bottom" id="e8c-34-CHf"/>
+                            <constraint firstAttribute="trailing" secondItem="gon-gN-eTt" secondAttribute="trailing" id="unX-eL-RST"/>
+                            <constraint firstItem="gon-gN-eTt" firstAttribute="top" secondItem="DI1-ER-Wh2" secondAttribute="top" id="xtA-Cm-e3i"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionViewFlowLayout" destination="91K-re-FwI" id="gNY-al-s3g"/>
+                        <outlet property="mycollectionView" destination="gon-gN-eTt" id="JFE-sS-5BK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="smT-c7-R0B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4034.7826086956525" y="-283.25892857142856"/>
+        </scene>
+    </scenes>
+</document>
