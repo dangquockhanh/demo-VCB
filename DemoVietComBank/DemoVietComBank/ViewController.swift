@@ -17,6 +17,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     var photo = [Photo]()
     
+  
+    
         let WIDTH_SCREEN = UIScreen.main.bounds.width
         let numberOfItems: CGFloat = 1
         let padding: CGFloat = 0
@@ -65,6 +67,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
       return  photo.count
     }
     
